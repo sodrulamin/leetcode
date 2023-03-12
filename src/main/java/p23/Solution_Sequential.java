@@ -1,6 +1,6 @@
 package p23;
 
-public class Solution {
+public class Solution_Sequential {
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode head = new ListNode(0, null);
 
