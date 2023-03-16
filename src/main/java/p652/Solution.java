@@ -1,5 +1,6 @@
 package p652;
 
+import data.TreeNode;
 import sun.reflect.generics.tree.Tree;
 
 import java.util.ArrayList;
@@ -7,24 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Solution {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        
-        TreeNode() {
-        }
-        
-        TreeNode(int val) {
-            this.val = val;
-        }
-        
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
     
     public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
         List<TreeNode> resultSet = new ArrayList<>();

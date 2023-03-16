@@ -1,5 +1,7 @@
 package p103;
 
+import data.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -42,26 +44,6 @@ public class Solution {
         }
         
         return result;
-    }
-    
-    
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        
-        TreeNode() {
-        }
-        
-        TreeNode(int val) {
-            this.val = val;
-        }
-        
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
     
     private static final int NULL = 200;
