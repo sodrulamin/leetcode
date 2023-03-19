@@ -1,10 +1,12 @@
 package p208;
 
+import data.TrieNode;
+
 class Trie {
     private final TrieNode root;
     
     public Trie() {
-        this.root = new TrieNode(' ');
+        this.root = new TrieNode();
     }
     
     public void insert(String word) {
@@ -13,10 +15,10 @@ class Trie {
             char c = word.charAt(i);
             int index = c - 'a';
             if(node.children[index] == null)
-                node.children[index] = new TrieNode(c);
+                node.children[index] = new TrieNode();
             node = node.children[index];
         }
-        node.completeWord = true;
+        node.wordEnd = true;
     }
     
     public boolean search(String word) {
@@ -29,7 +31,7 @@ class Trie {
             
             node = node.children[index];
         }
-        return node.completeWord;
+        return node.wordEnd;
     }
     
     public boolean startsWith(String prefix) {
@@ -42,17 +44,5 @@ class Trie {
             node = node.children[index];
         }
         return true;
-    }
-    
-    private static class TrieNode {
-        public char c;
-        public boolean completeWord;
-        public TrieNode [] children;
-        
-        public TrieNode(char c) {
-            this.c = c;
-            this.completeWord = false;
-            this.children = new TrieNode[26];
-        }
     }
 }
