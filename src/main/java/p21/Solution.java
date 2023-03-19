@@ -1,5 +1,7 @@
 package p21;
 
+import data.ListNode;
+
 import java.util.List;
 
 public class Solution {
@@ -30,22 +32,5 @@ public class Solution {
         current.next = new ListNode(list2.val, null);
         addNode(current.next, list1, list2.next);
     }
-
-
-    private static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
+    
 }

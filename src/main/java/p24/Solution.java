@@ -1,6 +1,8 @@
 package p24;
 
 
+import data.ListNode;
+
 class Solution {
     public ListNode swapPairs(ListNode head) {
         if(head == null)
@@ -34,13 +36,5 @@ class Solution {
         first.next = second.next;
         second.next = first;
         return second;
-    }
-
-    public static class ListNode {
-         int val;
-         ListNode next;
-         ListNode() {}
-         ListNode(int val) { this.val = val; }
-         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 }

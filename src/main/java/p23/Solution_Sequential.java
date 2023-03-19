@@ -1,5 +1,7 @@
 package p23;
 
+import data.ListNode;
+
 public class Solution_Sequential {
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode head = new ListNode(0, null);
@@ -30,13 +32,5 @@ public class Solution_Sequential {
         currentNode.next = new ListNode(list[index].val, null);
         list[index] = list[index].next;
         addNode(currentNode.next, list);
-    }
-
-    public class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 }

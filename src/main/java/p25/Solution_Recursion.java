@@ -1,5 +1,7 @@
 package p25;
 
+import data.ListNode;
+
 public class Solution_Recursion {
     public ListNode reverseKGroup(ListNode head, int k) {
         //if head is null return null
@@ -99,14 +101,6 @@ public class Solution_Recursion {
 
         head = new Solution_Recursion().reverseKGroup(head, 1);
         printList(head);
-    }
-
-    private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 
     private static void printList(ListNode head){

@@ -1,14 +1,8 @@
 package p23;
 
+import data.ListNode;
+
 public class Solution {
-    
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
     
     public ListNode mergeKLists(ListNode[] lists) {
         if(lists.length == 0)
@@ -16,7 +10,7 @@ public class Solution {
         return mergeListsInRange(lists, 0, lists.length - 1);
     }
     
-    private ListNode mergeListsInRange(ListNode [] lists, int start, int end) {
+    private ListNode mergeListsInRange(ListNode[] lists, int start, int end) {
         if(start == end)
             return lists[start];
         
