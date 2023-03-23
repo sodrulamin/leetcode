@@ -18,13 +18,16 @@ public class UnionFind {
         return parent[a];
     }
     
-    public void union (int x, int y) {
+    public boolean union (int x, int y) {
         int xset = find(x);
         int yset = find(y);
+        if(xset == yset)
+            return false;
         
         if(yset < xset)
             parent[xset] = yset;
         else
             parent[yset] = xset;
+        return true;
     }
 }
