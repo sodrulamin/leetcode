@@ -1,6 +1,7 @@
 package p460;
 
-import javafx.util.Pair;
+
+import data.Pair;
 
 import java.util.HashMap;
 import java.util.LinkedHashSet;

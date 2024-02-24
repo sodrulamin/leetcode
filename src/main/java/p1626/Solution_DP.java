@@ -1,6 +1,7 @@
 package p1626;
 
-import javafx.util.Pair;
+
+import data.Pair;
 
 import java.util.Arrays;
 import java.util.Comparator;

@@ -33,7 +33,7 @@ class Solution {
             }
         }
 
-        List<Integer> result = new ArrayList();
+        List<Integer> result = new ArrayList<>();
         while(maxIndex != -1) {
             result.add(0, nums[maxIndex]);
             maxIndex = prevElement[maxIndex];
