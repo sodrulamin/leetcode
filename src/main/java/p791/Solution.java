@@ -4,31 +4,30 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Solution {
+    private static final int BASE = 'a';
     public String customSortString(String order, String s) {
-        Map<Character, Integer> map = new HashMap<>();
+        int [] count = new int[26];
+        int index = 0;
 
         for(char ch: s.toCharArray()) {
-            Integer count = map.getOrDefault(ch, 0);
-            map.put(ch, count + 1);
+            index = ch - BASE;
+            count[index]++;
         }
 
         StringBuilder builder = new StringBuilder();
         for(char ch: order.toCharArray()) {
-            int count = map.getOrDefault(ch, 0);
-            while (count > 0) {
+            index = ch - BASE;
+            while (count[index] > 0) {
                 builder.append(ch);
-                count--;
+                count[index]--;
             }
-            map.remove(ch);
         }
 
-        for(Map.Entry<Character, Integer> entry: map.entrySet()) {
-            int count = entry.getValue();
-            char ch = entry.getKey();
+        for(int i = 0; i < 26; i++) {
 
-            while (count > 0) {
-                count--;
-                builder.append(ch);
+            while (count[i] > 0) {
+                count[i]--;
+                builder.append((char)(i + BASE));
             }
         }
 
