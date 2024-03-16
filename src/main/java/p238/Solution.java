@@ -1,8 +1,5 @@
 package p238;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class Solution {
     public int[] productExceptSelf(int[] nums) {
         int [] ans = new int[nums.length];

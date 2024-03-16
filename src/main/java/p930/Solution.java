@@ -1,7 +1,5 @@
 package p930;
 
-import java.util.Arrays;
-
 public class Solution {
 
     public int numSubarraysWithSum(int[] nums, int goal) {
