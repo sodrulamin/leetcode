@@ -1,5 +1,7 @@
 package p141;
 
+import data.ListNode;
+
 public class Solution {
     public boolean hasCycle(ListNode head) {
         return visit(head, 0);

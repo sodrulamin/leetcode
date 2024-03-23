@@ -1,5 +1,8 @@
 package p1171;
 
+import data.ListNode;
+import util.Utils;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -44,19 +47,8 @@ public class SolutionMap {
         start.next = current.next;
     }
 
-    private static ListNode createLinkedList (int [] array) {
-        ListNode head = new ListNode(array[0]);
-        ListNode current = head;
-        for(int i = 1; i < array.length; i++) {
-            current.next = new ListNode(array[i]);
-            current = current.next;
-        }
-
-        return head;
-    }
-
     public static void main(String[] args) {
-        ListNode node = createLinkedList(new int[] {1,3,2,-3,-2,5,5,-5,1});
+        ListNode node = Utils.createLinkedList(new int[] {1,3,2,-3,-2,5,5,-5,1});
 
         new SolutionMap().removeZeroSumSublists(node);
     }

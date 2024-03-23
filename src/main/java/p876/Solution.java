@@ -1,5 +1,7 @@
 package p876;
 
+import data.ListNode;
+
 public class Solution {
     public ListNode middleNode(ListNode head) {
         if(head.next == null)

@@ -1,5 +1,7 @@
 package p1171;
 
+import data.ListNode;
+
 public class Solution {
     public ListNode removeZeroSumSublists(ListNode head) {
         if(head == null)

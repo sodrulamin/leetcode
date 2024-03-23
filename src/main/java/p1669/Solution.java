@@ -1,5 +1,7 @@
 package p1669;
 
+import data.ListNode;
+
 public class Solution {
     public ListNode mergeInBetween(ListNode list1, int a, int b, ListNode list2) {
         int x = b - a + 2; //exclude both start and end, so add 2

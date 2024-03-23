@@ -1,5 +1,7 @@
 package p19;
 
+import data.ListNode;
+
 public class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode current = head;
