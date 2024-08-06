@@ -21,7 +21,7 @@ public class Solution {
         list.add(nums[index]);
         subsets(nums, index + 1, list, result);
 
-        list.removeLast();
+        list.remove(list.size() - 1);
         subsets(nums, index + 1, list, result);
     }
 }
